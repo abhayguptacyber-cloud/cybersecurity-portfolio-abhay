@@ -5,12 +5,19 @@
 }
 
 body{
+
   font-family: Arial, sans-serif;
+
   background-color: #0f172a;
+
   color: white;
 
- 
+  margin: 0;
 }
+
+
+/* NAVBAR */
+
 nav{
 
   width: 100%;
@@ -23,9 +30,13 @@ nav{
 
   padding: 20px 50px;
 
-  position: absolute;
+  position: fixed;
 
   top: 0;
+
+  background-color: #0f172a;
+
+  z-index: 1000;
 }
 
 .logo{
@@ -60,12 +71,17 @@ ul li a{
 
   transition: 0.3s ease;
 }
+
 ul li a:hover{
 
   background-color: #38bdf8;
 
   color: black;
 }
+
+
+/* HERO SECTION */
+
 .hero{
 
   min-height: 100vh;
@@ -84,6 +100,7 @@ ul li a:hover{
 
   background-color: #0f172a;
 }
+
 .hero-content{
 
   background-color: #1e293b;
@@ -96,8 +113,11 @@ ul li a:hover{
 
   max-width: 450px;
 }
+
 .profile-img{
+
   width: 180px;
+
   height: 180px;
 
   border-radius: 50%;
@@ -106,24 +126,34 @@ ul li a:hover{
 }
 
 h1{
+
   font-size: 36px;
+
   margin-bottom: 10px;
 }
 
 h2{
+
   color: #38bdf8;
+
   margin-bottom: 20px;
 }
 
 p{
-  margin-bottom: 25px;
+
+  font-size: 18px;
+
   line-height: 1.6;
+
+  margin-bottom: 25px;
 }
 
-a{
-  display: inline-block;
 
-  text-decoration: none;
+/* BUTTON */
+
+.btn{
+
+  display: inline-block;
 
   background-color: #38bdf8;
 
@@ -131,23 +161,32 @@ a{
 
   padding: 12px 25px;
 
-  border-radius: 8px;
+  border-radius: 10px;
+
+  text-decoration: none;
 
   font-weight: bold;
 
   transition: 0.3s;
 }
 
-a:hover{
+.btn:hover{
+
   background-color: white;
+
+  transform: scale(1.05);
 }
+
+
+/* ABOUT SECTION */
+
 .about{
 
   padding: 100px 50px;
 
   text-align: center;
 
-  background-color: #0f172a;
+  background-color: #111827;
 }
 
 .about h2{
@@ -155,8 +194,6 @@ a:hover{
   font-size: 40px;
 
   margin-bottom: 20px;
-
-  color: #38bdf8;
 }
 
 .about p{
@@ -169,13 +206,17 @@ a:hover{
 
   line-height: 1.8;
 }
+
+
+/* SKILLS SECTION */
+
 .skills{
 
   padding: 100px 50px;
 
   text-align: center;
 
-  background-color: #111827;
+  background-color: #0f172a;
 }
 
 .skills h2{
@@ -183,8 +224,6 @@ a:hover{
   font-size: 40px;
 
   margin-bottom: 50px;
-
-  color: #38bdf8;
 }
 
 .skills-container{
@@ -221,13 +260,17 @@ a:hover{
 
   transform: translateY(-5px);
 }
+
+
+/* PROJECTS SECTION */
+
 .projects{
 
   padding: 100px 50px;
 
   text-align: center;
 
-  background-color: #0f172a;
+  background-color: #111827;
 }
 
 .projects h2{
@@ -235,8 +278,6 @@ a:hover{
   font-size: 40px;
 
   margin-bottom: 50px;
-
-  color: #38bdf8;
 }
 
 .projects-container{
@@ -277,31 +318,21 @@ a:hover{
   color: #38bdf8;
 }
 
-.project-card p{
 
-  margin-bottom: 20px;
-}
+/* CONTACT SECTION */
+
 .contact{
 
   padding: 100px 20px;
 
   text-align: center;
 
-  background-color: #111827;
+  background-color: #0f172a;
 }
 
 .contact h2{
 
   font-size: 40px;
-
-  margin-bottom: 20px;
-
-  color: #38bdf8;
-}
-
-.contact p{
-
-  font-size: 18px;
 
   margin-bottom: 20px;
 }
@@ -324,13 +355,75 @@ a:hover{
 
   color: white;
 }
+
+
+/* FOOTER */
+
 footer{
 
-  background-color: #0f172a;
+  background-color: #111827;
 
   text-align: center;
 
   padding: 20px;
 
   font-size: 16px;
+}
+
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width:768px){
+
+  nav{
+
+    flex-direction: column;
+
+    gap: 20px;
+
+    padding: 20px;
+  }
+
+  ul{
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    padding: 0;
+  }
+
+  .hero-content{
+
+    width: 90%;
+  }
+
+  .projects-container{
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  .skills-container{
+
+    flex-direction: column;
+
+    align-items: center;
+  }
+
+  h1{
+
+    font-size: 28px;
+  }
+
+  h2{
+
+    font-size: 24px;
+  }
+
+  p{
+
+    font-size: 16px;
+  }
 }
