@@ -281,3 +281,56 @@ a:hover{
 
   margin-bottom: 20px;
 }
+.contact{
+
+  padding: 100px 20px;
+
+  text-align: center;
+
+  background-color: #111827;
+}
+
+.contact h2{
+
+  font-size: 40px;
+
+  margin-bottom: 20px;
+
+  color: #38bdf8;
+}
+
+.contact p{
+
+  font-size: 18px;
+
+  margin-bottom: 20px;
+}
+
+.contact-info{
+
+  margin-top: 30px;
+}
+
+.contact-info a{
+
+  color: #38bdf8;
+
+  text-decoration: none;
+
+  font-weight: bold;
+}
+
+.contact-info a:hover{
+
+  color: white;
+}
+footer{
+
+  background-color: #0f172a;
+
+  text-align: center;
+
+  padding: 20px;
+
+  font-size: 16px;
+}
