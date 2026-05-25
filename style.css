@@ -56,12 +56,19 @@ ul li a{
 
   font-size: 18px;
 
-  transition: 0.3s;
-}
+  font-weight: bold;
 
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  transition: 0.3s ease;
+}
 ul li a:hover{
 
-  color: #38bdf8;
+  background-color: #38bdf8;
+
+  color: black;
 }
 .hero{
   background-color: #1e293b;
