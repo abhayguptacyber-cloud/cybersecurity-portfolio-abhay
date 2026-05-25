@@ -84,6 +84,18 @@ ul li a:hover{
 
   background-color: #0f172a;
 }
+.hero-content{
+
+  background-color: #1e293b;
+
+  padding: 40px;
+
+  border-radius: 15px;
+
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+
+  max-width: 450px;
+}
 .profile-img{
   width: 180px;
   height: 180px;
