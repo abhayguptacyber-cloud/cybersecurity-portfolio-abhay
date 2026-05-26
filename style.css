@@ -432,3 +432,65 @@ footer{
   }
 }
 }
+#theme-toggle{
+
+  background-color: #38bdf8;
+
+  border: none;
+
+  padding: 10px 15px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+
+/* LIGHT MODE */
+
+.light-mode{
+
+  background-color: white;
+
+  color: black;
+}
+
+.light-mode nav{
+
+  background-color: white;
+}
+
+.light-mode .hero{
+
+  background-color: #f3f4f6;
+}
+
+.light-mode .hero-content,
+.light-mode .project-card,
+.light-mode .skill-card{
+
+  background-color: white;
+
+  color: black;
+
+  border: 1px solid #ddd;
+}
+
+.light-mode .about,
+.light-mode .projects,
+.light-mode .contact,
+.light-mode .skills{
+
+  background-color: #f9fafb;
+
+  color: black;
+}
+
+.light-mode footer{
+
+  background-color: #e5e7eb;
+
+  color: black;
+}
