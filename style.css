@@ -732,17 +732,83 @@ footer{
 }
 
 
-/* CONTACT FORM BUTTON */
+/* CONTACT FORM */
+
+.contact-form{
+
+  max-width: 700px;
+
+  margin: 40px auto 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 20px;
+}
+
+/* INPUTS + TEXTAREA */
+
+.contact-form input,
+.contact-form textarea{
+
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background-color: rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 16px;
+
+  outline: none;
+
+  transition: 0.3s ease;
+}
+
+/* TEXTAREA HEIGHT */
+
+.contact-form textarea{
+
+  min-height: 180px;
+
+  resize: none;
+}
+
+/* FOCUS EFFECT */
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+  border: 1px solid #38bdf8;
+
+  box-shadow: 0px 0px 10px rgba(56,189,248,0.5);
+}
+
+/* PLACEHOLDER COLOR */
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+
+  color: rgba(255,255,255,0.6);
+}
+
+/* SEND BUTTON */
 
 .contact-form button{
 
   width: 100%;
 
-  padding: 14px;
+  padding: 16px;
 
   border: none;
 
-  border-radius: 10px;
+  border-radius: 12px;
 
   background: linear-gradient(135deg, #38bdf8, #0ea5e9);
 
@@ -758,11 +824,10 @@ footer{
 
   margin-top: 10px;
 
-  box-shadow: 0px 4px 15px rgba(56, 189, 248, 0.4);
-
+  box-shadow: 0px 4px 15px rgba(56,189,248,0.4);
 }
 
-/* HOVER EFFECT */
+/* BUTTON HOVER */
 
 .contact-form button:hover{
 
@@ -770,43 +835,17 @@ footer{
 
   background: linear-gradient(135deg, #0ea5e9, #0284c7);
 
-  box-shadow: 0px 6px 20px rgba(56, 189, 248, 0.6);
-
+  box-shadow: 0px 6px 20px rgba(56,189,248,0.6);
 }
 
-/* CLICK EFFECT */
+/* BUTTON CLICK */
 
 .contact-form button:active{
 
   transform: scale(0.98);
-
 }
 
-.contact-form input,
-.contact-form textarea{
-
-  padding: 15px;
-
-  border: none;
-
-  border-radius: 10px;
-
-  background-color: rgba(255,255,255,0.1);
-
-  color: white;
-
-  font-size: 16px;
-
-  outline: none;
-}
-
-.contact-form textarea{
-
-  min-height: 150px;
-
-  resize: none;
-}
-/* LIGHT MODE CONTACT FORM FIX */
+/* LIGHT MODE FIX */
 
 .light-mode .contact-form input,
 .light-mode .contact-form textarea{
