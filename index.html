@@ -8,7 +8,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Abhay Gupta | Frontend Developer</title>
-  <meta name="google-site-verification" content="w0BHHGs-t-TD131V5QDSllbmQLI2JPOpMYAt4-sC5Q4" />
+
+  <!-- GOOGLE VERIFICATION -->
+
+  <meta 
+    name="google-site-verification" 
+    content="w0BHHGs-t-TD131V5QDSllbmQLI2JPOpMYAt4-sC5Q4"
+  />
+
+  <!-- SEO DESCRIPTION -->
+
   <meta 
     name="description" 
     content="Abhay Gupta Frontend Developer Portfolio Website"
@@ -18,21 +27,22 @@
 
 </head>
 <body>
-  
+
   <!-- ANIMATED BACKGROUND -->
 
-<div class="background-animation">
+  <div class="background-animation">
 
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
-  <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
 
-</div>
+  </div>
+
 
   <!-- NAVBAR -->
 
@@ -40,7 +50,11 @@
 
     <h2 class="logo">Abhay</h2>
 
-    <ul>
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+    <ul id="nav-links">
 
       <li><a href="#home">Home</a></li>
 
@@ -53,8 +67,9 @@
       <li><a href="#contact">Contact</a></li>
 
     </ul>
+
     <button id="theme-toggle">
-       🌙
+      🌙
     </button>
 
   </nav>
@@ -62,7 +77,7 @@
 
   <!-- HERO SECTION -->
 
-  <div class="hero" id="home">
+  <section class="hero" id="home">
 
     <div class="hero-content">
 
@@ -75,7 +90,7 @@
       <h1>Abhay Gupta</h1>
 
       <h2>
-      <span id="typing-text"></span>
+        <span id="typing-text"></span>
       </h2>
 
       <p>
@@ -83,21 +98,21 @@
       </p>
 
       <a 
-        class="btn"
-        href="https://github.com/abhayguptacyber-cloud/cybersecurity-portfolio-abhay" 
+        href="https://github.com/abhayguptacyber-cloud/cybersecurity-portfolio-abhay"
         target="_blank"
+        class="btn"
       >
         View My GitHub
       </a>
 
     </div>
 
-  </div>
+  </section>
 
 
   <!-- ABOUT SECTION -->
 
-  <section id="about" class="about">
+  <section id="about" class="about reveal">
 
     <h2>About Me</h2>
 
@@ -112,7 +127,7 @@
 
   <!-- SKILLS SECTION -->
 
-  <section id="skills" class="skills">
+  <section id="skills" class="skills reveal">
 
     <h2>My Skills</h2>
 
@@ -137,7 +152,7 @@
 
   <!-- PROJECTS SECTION -->
 
-  <section id="projects" class="projects">
+  <section id="projects" class="projects reveal">
 
     <h2>My Projects</h2>
 
@@ -147,16 +162,22 @@
 
       <div class="project-card">
 
+        <img 
+          src="project1.jpg"
+          alt="Portfolio Website"
+          class="project-image"
+        >
+
         <h3>Portfolio Website</h3>
 
         <p>
-          A modern responsive portfolio website built using HTML and CSS.
+          A responsive frontend developer portfolio using HTML, CSS and JavaScript.
         </p>
 
         <a 
-          class="btn"
           href="https://github.com/abhayguptacyber-cloud/cybersecurity-portfolio-abhay"
           target="_blank"
+          class="btn"
         >
           View Project
         </a>
@@ -168,13 +189,19 @@
 
       <div class="project-card">
 
+        <img 
+          src="project2.jpg"
+          alt="Netflix Clone"
+          class="project-image"
+        >
+
         <h3>Netflix Clone</h3>
 
         <p>
-          Frontend Netflix homepage clone using HTML and CSS.
+          Frontend Netflix UI clone created using HTML and CSS.
         </p>
 
-        <a class="btn" href="#">
+        <a href="#" class="btn">
           View Project
         </a>
 
@@ -185,13 +212,19 @@
 
       <div class="project-card">
 
+        <img 
+          src="project3.jpg"
+          alt="Landing Page"
+          class="project-image"
+        >
+
         <h3>Landing Page</h3>
 
         <p>
-          Responsive landing page with modern UI design.
+          Modern responsive landing page with clean UI design.
         </p>
 
-        <a class="btn" href="#">
+        <a href="#" class="btn">
           View Project
         </a>
 
@@ -204,25 +237,25 @@
 
   <!-- CONTACT SECTION -->
 
-  <section id="contact" class="contact">
+  <section id="contact" class="contact reveal">
 
     <h2>Contact Me</h2>
 
     <p>
-      Feel free to contact me for frontend development projects, collaborations, or opportunities.
+      Feel free to contact me for frontend projects and collaborations.
     </p>
 
     <div class="contact-info">
 
       <p>
-        📧 Email:
+        Email:
         <a href="mailto:abhaygupta.cyber@gmail.com">
           abhaygupta.cyber@gmail.com
         </a>
       </p>
 
       <p>
-        📱 Phone:
+        Phone:
         <a href="tel:7983620142">
           7983620142
         </a>
@@ -242,7 +275,12 @@
     </p>
 
   </footer>
- <script src="script.js"></script>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>
