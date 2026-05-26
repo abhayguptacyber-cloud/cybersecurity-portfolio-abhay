@@ -13,6 +13,10 @@ toggleBtn.addEventListener("click", () => {
     toggleBtn.textContent = "🌙";
   }
 });
+
+
+/* TYPING ANIMATION */
+
 const texts = [
   "Frontend Developer",
   "Cybersecurity Enthusiast",
