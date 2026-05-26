@@ -15,8 +15,6 @@ body{
   background-color: #0f172a;
 
   color: white;
-
-  margin: 0;
 }
 
 
@@ -84,6 +82,24 @@ ul li a:hover{
 }
 
 
+/* THEME TOGGLE BUTTON */
+
+#theme-toggle{
+
+  background-color: #38bdf8;
+
+  border: none;
+
+  padding: 10px 15px;
+
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-size: 18px;
+}
+
+
 /* HERO SECTION */
 
 .hero{
@@ -116,6 +132,8 @@ ul li a:hover{
   box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
 
   max-width: 450px;
+
+  animation: fadeIn 1s ease;
 }
 
 .profile-img{
@@ -254,6 +272,8 @@ p{
   font-weight: bold;
 
   transition: 0.3s;
+
+  animation: fadeIn 1s ease;
 }
 
 .skill-card:hover{
@@ -308,6 +328,8 @@ p{
   transition: 0.3s;
 
   box-shadow: 0px 0px 15px rgba(0,0,0,0.4);
+
+  animation: fadeIn 1s ease;
 }
 
 .project-card:hover{
@@ -375,6 +397,96 @@ footer{
 }
 
 
+/* ANIMATIONS */
+
+@keyframes fadeIn{
+
+  from{
+
+    opacity: 0;
+
+    transform: translateY(20px);
+  }
+
+  to{
+
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+
+/* LIGHT MODE */
+
+.light-mode{
+
+  background-color: white;
+
+  color: black;
+}
+
+.light-mode nav{
+
+  background-color: white;
+}
+
+.light-mode ul li a{
+
+  color: black;
+}
+
+.light-mode ul li a:hover{
+
+  background-color: #38bdf8;
+
+  color: white;
+}
+
+.light-mode .logo{
+
+  color: #2563eb;
+}
+
+.light-mode .hero{
+
+  background-color: #f3f4f6;
+}
+
+.light-mode .hero-content,
+.light-mode .project-card,
+.light-mode .skill-card{
+
+  background-color: white;
+
+  color: black;
+
+  border: 1px solid #ddd;
+}
+
+.light-mode .about,
+.light-mode .projects,
+.light-mode .contact,
+.light-mode .skills{
+
+  background-color: #f9fafb;
+
+  color: black;
+}
+
+.light-mode footer{
+
+  background-color: #e5e7eb;
+
+  color: black;
+}
+
+.light-mode .contact-info a{
+
+  color: #2563eb;
+}
+
+
 /* RESPONSIVE DESIGN */
 
 @media(max-width:768px){
@@ -429,91 +541,5 @@ footer{
   p{
 
     font-size: 16px;
-  }
-}
-}
-#theme-toggle{
-
-  background-color: #38bdf8;
-
-  border: none;
-
-  padding: 10px 15px;
-
-  border-radius: 10px;
-
-  cursor: pointer;
-
-  font-size: 18px;
-}
-
-
-/* LIGHT MODE */
-
-.light-mode{
-
-  background-color: white;
-
-  color: black;
-}
-
-.light-mode nav{
-
-  background-color: white;
-}
-
-.light-mode .hero{
-
-  background-color: #f3f4f6;
-}
-
-.light-mode .hero-content,
-.light-mode .project-card,
-.light-mode .skill-card{
-
-  background-color: white;
-
-  color: black;
-
-  border: 1px solid #ddd;
-}
-
-.light-mode .about,
-.light-mode .projects,
-.light-mode .contact,
-.light-mode .skills{
-
-  background-color: #f9fafb;
-
-  color: black;
-}
-
-.light-mode footer{
-
-  background-color: #e5e7eb;
-
-  color: black;
-}
-.hero-content,
-.skill-card,
-.project-card{
-
-  animation: fadeIn 1s ease;
-}
-
-@keyframes fadeIn{
-
-  from{
-
-    opacity: 0;
-
-    transform: translateY(20px);
-  }
-
-  to{
-
-    opacity: 1;
-
-    transform: translateY(0);
   }
 }
