@@ -1,5 +1,12 @@
 const toggleBtn = document.getElementById("theme-toggle");
 
+const menuToggle = document.getElementById("menu-toggle");
+
+const navLinks = document.getElementById("nav-links");
+
+
+/* DARK LIGHT MODE */
+
 toggleBtn.addEventListener("click", () => {
 
   document.body.classList.toggle("light-mode");
@@ -12,6 +19,14 @@ toggleBtn.addEventListener("click", () => {
 
     toggleBtn.textContent = "🌙";
   }
+});
+
+
+/* MOBILE MENU */
+
+menuToggle.addEventListener("click", () => {
+
+  navLinks.classList.toggle("active");
 });
 
 
@@ -70,3 +85,27 @@ function eraseText(){
 }
 
 window.onload = typeWriter;
+
+
+/* SCROLL REVEAL */
+
+window.addEventListener("scroll", reveal);
+
+function reveal(){
+
+  const reveals = document.querySelectorAll(".reveal");
+
+  for(let i = 0; i < reveals.length; i++){
+
+    const windowHeight = window.innerHeight;
+
+    const revealTop = reveals[i].getBoundingClientRect().top;
+
+    const revealPoint = 100;
+
+    if(revealTop < windowHeight - revealPoint){
+
+      reveals[i].classList.add("active");
+    }
+  }
+}
