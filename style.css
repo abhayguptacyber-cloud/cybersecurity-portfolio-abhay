@@ -773,4 +773,20 @@ footer{
 
   resize: none;
 }
+/* LIGHT MODE CONTACT FORM FIX */
 
+.light-mode .contact-form input,
+.light-mode .contact-form textarea{
+
+  background-color: rgba(0,0,0,0.05);
+
+  color: black;
+
+  border: 1px solid #ccc;
+}
+
+.light-mode .contact-form input::placeholder,
+.light-mode .contact-form textarea::placeholder{
+
+  color: #555;
+}
