@@ -868,35 +868,55 @@ footer{
 
 @media (max-width: 768px){
 
- /* MOBILE NAVBAR */
-
-@media (max-width: 768px){
+  /* NAVBAR */
 
   nav{
 
-    flex-direction: column;
+    position: fixed;
 
-    padding: 15px 20px;
+    top: 0;
 
-    gap: 15px;
-  }
-
-  .logo{
-
-    font-size: 40px;
-  }
-
-  nav ul{
-
-    display: grid;
-
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 15px;
+    left: 0;
 
     width: 100%;
 
-    text-align: center;
+    background-color: rgba(15, 23, 42, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+
+    padding: 15px 10px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+  }
+
+  /* LOGO */
+
+  .logo{
+
+    font-size: 38px;
+  }
+
+  /* NAV LINKS */
+
+  nav ul{
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 0;
   }
 
   nav ul li{
@@ -906,42 +926,47 @@ footer{
 
   nav ul li a{
 
-    font-size: 20px;
+    font-size: 18px;
   }
 
   /* THEME BUTTON */
 
   #theme-toggle{
 
-    width: 60px;
+    width: 55px;
 
-    height: 60px;
+    height: 55px;
 
     font-size: 22px;
 
-    margin: 0 auto;
+    margin-top: 5px;
   }
 
   /* HERO SECTION */
 
   .hero{
 
-    padding-top: 30px;
+    padding-top: 280px;
+
+    padding-left: 15px;
+
+    padding-right: 15px;
   }
 
   .hero-content{
 
-    margin-top: 20px;
+    width: 100%;
+
+    padding: 25px 20px;
   }
 
-}
   /* PROFILE IMAGE */
 
   .profile-img{
 
-    width: 180px;
+    width: 170px;
 
-    height: 180px;
+    height: 170px;
   }
 
   /* TEXT */
@@ -960,16 +985,18 @@ footer{
 
     font-size: 18px;
 
-    line-height: 1.8;
+    line-height: 1.7;
   }
 
   /* BUTTONS */
 
   .hero-buttons{
 
+    display: flex;
+
     flex-direction: column;
 
-    width: 100%;
+    gap: 15px;
   }
 
   .btn{
@@ -991,11 +1018,6 @@ footer{
     grid-template-columns: 1fr;
   }
 
-  .project-card img{
-
-    height: auto;
-  }
-
   /* CONTACT FORM */
 
   .contact-form{
@@ -1009,20 +1031,13 @@ footer{
     width: 100%;
   }
 
-  /* CONTACT INFO */
-
-  .contact-info p{
-
-    font-size: 18px;
-
-    word-break: break-word;
-  }
-
-  /* SOCIAL ICONS */
+  /* SOCIAL LINKS */
 
   .social-icons{
 
     flex-wrap: wrap;
+
+    justify-content: center;
 
     gap: 20px;
   }
@@ -1031,8 +1046,8 @@ footer{
 
   footer{
 
-    font-size: 16px;
+    font-size: 15px;
 
-    padding: 20px;
+    text-align: center;
   }
 }
