@@ -862,3 +862,164 @@ footer{
 
   color: #555;
 }
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px){
+
+  /* NAVBAR */
+
+  nav{
+
+    flex-direction: column;
+
+    padding: 20px;
+
+    gap: 20px;
+  }
+
+  nav ul{
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 25px;
+  }
+
+  nav ul li a{
+
+    font-size: 18px;
+  }
+
+  /* THEME BUTTON */
+
+  #theme-toggle{
+
+    width: 65px;
+
+    height: 65px;
+
+    font-size: 24px;
+
+    margin-top: 10px;
+  }
+
+  /* HERO SECTION */
+
+  .hero{
+
+    padding: 60px 15px;
+  }
+
+  .hero-content{
+
+    width: 100%;
+
+    max-width: 100%;
+
+    padding: 30px 20px;
+  }
+
+  /* PROFILE IMAGE */
+
+  .profile-img{
+
+    width: 180px;
+
+    height: 180px;
+  }
+
+  /* TEXT */
+
+  h1{
+
+    font-size: 42px;
+  }
+
+  h2{
+
+    font-size: 28px;
+  }
+
+  p{
+
+    font-size: 18px;
+
+    line-height: 1.8;
+  }
+
+  /* BUTTONS */
+
+  .hero-buttons{
+
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .btn{
+
+    width: 100%;
+  }
+
+  /* SKILLS */
+
+  .skills-container{
+
+    grid-template-columns: 1fr;
+  }
+
+  /* PROJECTS */
+
+  .projects-container{
+
+    grid-template-columns: 1fr;
+  }
+
+  .project-card img{
+
+    height: auto;
+  }
+
+  /* CONTACT FORM */
+
+  .contact-form{
+
+    width: 100%;
+  }
+
+  .contact-form input,
+  .contact-form textarea{
+
+    width: 100%;
+  }
+
+  /* CONTACT INFO */
+
+  .contact-info p{
+
+    font-size: 18px;
+
+    word-break: break-word;
+  }
+
+  /* SOCIAL ICONS */
+
+  .social-icons{
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+  }
+
+  /* FOOTER */
+
+  footer{
+
+    font-size: 16px;
+
+    padding: 20px;
+  }
+}
