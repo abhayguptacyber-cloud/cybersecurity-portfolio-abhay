@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Astro Solutions By Mamta Gupta</title>
+
+  <!-- SEO -->
+
+  <meta name="description" content="Professional astrology consultation in Meerut by Mamta Gupta. Horoscope Reading, Vaastu, Match Making, Career & Health Guidance.">
+
+  <meta name="keywords" content="Astrologer in Meerut, Horoscope Reading, Vaastu Consultant, Kundli Matching, Mamta Gupta Astrology">
+
+  <meta name="author" content="Mamta Gupta">
+
+  <!-- FAVICON -->
+
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <!-- GOOGLE FONT -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#f8f5ef;
+      color:#222;
+      line-height:1.6;
+      overflow-x:hidden;
+      position:relative;
+    }
+
+    /* ================= GOLDEN GLOW ================= */
+
+    body::before{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:rgba(244,176,0,0.08);
+      border-radius:50%;
+      top:-200px;
+      right:-150px;
+      z-index:-1;
+      filter:blur(80px);
+    }
+
+    /* ================= NAVBAR ================= */
+
+    nav{
+      width:100%;
+      background:#0f0f0f;
+      padding:18px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+    }
+
+    nav h2{
+      color:#f4b000;
+      font-size:30px;
+      font-weight:700;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-size:17px;
+      transition:0.3s;
+      font-weight:500;
+    }
+
+    nav ul li a:hover{
+      color:#f4b000;
+    }
+
+    /* ================= HERO SECTION ================= */
+
+    .hero{
+      min-height:95vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:70px 8%;
+      background:linear-gradient(to right,#f8f5ef,#f4e2b0);
+      gap:70px;
+      flex-wrap:wrap;
+    }
+
+    .hero-text{
+      flex:1;
+      min-width:300px;
+      animation:fadeIn 1.2s ease;
+    }
+
+    .tagline{
+      font-size:18px;
+      color:#f4a300;
+      margin-bottom:15px;
+      font-weight:600;
+      letter-spacing:2px;
+      text-transform:uppercase;
+    }
+
+    .hero-text h1{
+      font-size:72px;
+      color:#111;
+      margin-bottom:20px;
+      line-height:1.1;
+      font-weight:700;
+    }
+
+    .hero-text p{
+      font-size:20px;
+      color:#444;
+      margin-bottom:35px;
+      max-width:700px;
+    }
+
+    .hero-image{
+      flex:1;
+      min-width:300px;
+      text-align:center;
+      animation:slideIn 1.2s ease;
+    }
+
+    .hero-image img{
+      width:430px;
+      max-width:100%;
+      border-radius:25px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.2);
+      transition:0.4s ease;
+    }
+
+    .hero-image img:hover{
+      transform:scale(1.03);
+    }
+
+    /* ================= ANIMATIONS ================= */
+
+    @keyframes fadeIn{
+
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+
+    }
+
+    @keyframes slideIn{
+
+      from{
+        opacity:0;
+        transform:translateX(50px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateX(0);
+      }
+
+    }
+
+    /* ================= BUTTONS ================= */
+
+    .btns{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      padding:15px 30px;
+      text-decoration:none;
+      border-radius:10px;
+      font-size:17px;
+      transition:0.3s ease;
+      display:inline-block;
+      font-weight:600;
+    }
+
+    .btn:hover{
+      transform:translateY(-3px);
+    }
+
+    .btn-primary{
+      background:#f4b000;
+      color:white;
+    }
+
+    .btn-primary:hover{
+      background:#d99a00;
+    }
+
+    .btn-secondary{
+      background:#111;
+      color:white;
+    }
+
+    .btn-secondary:hover{
+      background:#333;
+    }
+
+    /* ================= SECTIONS ================= */
+
+    section{
+      padding:90px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:46px;
+      margin-bottom:60px;
+      color:#111;
+      font-weight:700;
+    }
+
+    /* ================= SERVICES ================= */
+
+    .services{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:30px;
+    }
+
+    .service-card{
+      background:white;
+      padding:35px;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      transition:0.4s ease;
+    }
+
+    .service-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 15px 30px rgba(0,0,0,0.12);
+    }
+
+    .service-card h3{
+      color:#f4a300;
+      margin-bottom:15px;
+      font-size:24px;
+    }
+
+    .service-card p{
+      color:#555;
+      font-size:16px;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about{
+      display:flex;
+      align-items:center;
+      gap:60px;
+      flex-wrap:wrap;
+    }
+
+    .about img{
+      width:380px;
+      max-width:100%;
+      border-radius:25px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+      transition:0.4s;
+    }
+
+    .about img:hover{
+      transform:scale(1.02);
+    }
+
+    .about-text{
+      flex:1;
+      min-width:300px;
+    }
+
+    .about-text p{
+      margin-bottom:20px;
+      color:#444;
+      font-size:18px;
+    }
+
+    /* ================= REVIEWS ================= */
+
+    .testimonials{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .testimonial{
+      background:white;
+      padding:35px;
+      border-radius:18px;
+      border-left:5px solid #f4b000;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      transition:0.4s ease;
+    }
+
+    .testimonial:hover{
+      transform:translateY(-10px);
+    }
+
+    .testimonial p{
+      color:#444;
+      margin-bottom:15px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-container{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:start;
+    }
+
+    .contact-info,
+    .contact-form{
+      background:white;
+      padding:40px;
+      border-radius:20px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .contact-info h3,
+    .contact-form h3{
+      color:#f4a300;
+      margin-bottom:25px;
+      font-size:30px;
+    }
+
+    .contact-info p{
+      margin-bottom:18px;
+      font-size:18px;
+      color:#444;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      width:100%;
+      padding:15px;
+      margin-bottom:20px;
+      border:1px solid #ccc;
+      border-radius:10px;
+      font-size:16px;
+      outline:none;
+    }
+
+    .contact-form textarea{
+      height:150px;
+      resize:none;
+    }
+
+    button{
+      border:none;
+      cursor:pointer;
+    }
+
+    /* ================= GOOGLE MAP ================= */
+
+    iframe{
+      margin-top:25px;
+      border-radius:15px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    .footer{
+      background:#0f0f0f;
+      color:white;
+      padding:60px 8% 20px;
+    }
+
+    .footer-content{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:40px;
+      margin-bottom:40px;
+    }
+
+    .footer h3{
+      color:#f4b000;
+      margin-bottom:15px;
+    }
+
+    .footer p{
+      color:#ccc;
+      margin-bottom:10px;
+    }
+
+    .footer a{
+      color:#ccc;
+      text-decoration:none;
+    }
+
+    .footer a:hover{
+      color:#f4b000;
+    }
+
+    .footer-bottom{
+      text-align:center;
+      border-top:1px solid #333;
+      padding-top:20px;
+      color:#aaa;
+    }
+
+    /* ================= FLOATING WHATSAPP ================= */
+
+    .floating-whatsapp{
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      background:#25d366;
+      color:white;
+      padding:15px 22px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      z-index:1000;
+      transition:0.3s ease;
+    }
+
+    .floating-whatsapp:hover{
+      transform:scale(1.05);
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:15px;
+      }
+
+      nav h2{
+        font-size:22px;
+        text-align:center;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+      }
+
+      .hero{
+        text-align:center;
+        padding-top:50px;
+      }
+
+      .hero-text h1{
+        font-size:48px;
+      }
+
+      .tagline{
+        font-size:14px;
+      }
+
+      .hero-text p{
+        font-size:18px;
+      }
+
+      .btns{
+        justify-content:center;
+      }
+
+      .section-title{
+        font-size:36px;
+      }
+
+      .contact-container{
+        grid-template-columns:1fr;
+      }
+
+      .about{
+        text-align:center;
+      }
+
+      .floating-whatsapp{
+        padding:12px 18px;
+        font-size:14px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <nav>
+
+    <h2>ASTRO SOLUTIONS BY MAMTA GUPTA</h2>
+
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- ================= HERO SECTION ================= -->
+
+  <section class="hero">
+
+    <div class="hero-text">
+
+      <div class="tagline">
+        YOU ARE JUST A CALL AWAY TO LIVE A GOOD LIFE
+      </div>
+
+      <h1>ASTRO SOLUTIONS</h1>
+
+      <p>
+        Trusted astrology guidance with years of experience in
+        Horoscope Reading, Vaastu, Match Making,
+        Career, Finance and Health Consultation.
+      </p>
+
+      <div class="btns">
+
+        <a href="#contact" class="btn btn-primary">
+          Book Consultation
+        </a>
+
+        <a href="https://wa.me/917017898533" class="btn btn-secondary">
+          WhatsApp Now
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img src="mamta.jpeg"Mamta Gupta">
+
+    </div>
+
+  </section>
+
+  <!-- ================= SERVICES ================= -->
+
+  <section id="services">
+
+    <h2 class="section-title">Our Services</h2>
+
+    <div class="services">
+
+      <div class="service-card">
+        <h3>Horoscope Reading</h3>
+        <p>
+          Detailed horoscope reading and future life guidance.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Vaastu Consultation</h3>
+        <p>
+          Vaastu solutions for home, office and business growth.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Gems & Stones</h3>
+        <p>
+          Personalized gemstones according to your horoscope.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Match Making</h3>
+        <p>
+          Kundli matching and marriage compatibility consultation.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Kaal Sarp Dosh Nivaran</h3>
+        <p>
+          Astrological remedies and spiritual guidance.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <h3>Career, Finance & Health</h3>
+        <p>
+          Complete life consultation for success and wellbeing.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about">
+
+    <h2 class="section-title">About Mamta Gupta</h2>
+
+    <div class="about">
+
+      <img src="mamta2.jpeg"About Mamta Gupta">
+
+      <div class="about-text">
+
+        <p>
+          Mamta Gupta is a trusted astrology consultant helping
+          people with horoscope reading, vaastu consultation,
+          gemstones, match making and spiritual guidance.
+        </p>
+
+        <p>
+          With years of practical experience, she provides
+          meaningful and confidential consultations to help
+          people make better life decisions with clarity.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= REVIEWS ================= -->
+
+  <section id="reviews">
+
+    <h2 class="section-title">Client Reviews</h2>
+
+    <div class="testimonials">
+
+      <div class="testimonial">
+
+        <p>
+          “Very accurate guidance and genuine consultation.
+          Highly recommended.”
+        </p>
+
+        <strong>- Rahul Sharma</strong>
+
+      </div>
+
+      <div class="testimonial">
+
+        <p>
+          “The vaastu consultation brought positivity
+          and peace to our home.”
+        </p>
+
+        <strong>- Neha Verma</strong>
+
+      </div>
+
+      <div class="testimonial">
+
+        <p>
+          “Professional consultation with practical remedies
+          and career guidance.”
+        </p>
+
+        <strong>- Amit Gupta</strong>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+
+  <section id="contact">
+
+    <h2 class="section-title">Contact Us</h2>
+
+    <div class="contact-container">
+
+      <div class="contact-info">
+
+        <h3>Contact Details</h3>
+
+        <p><strong>Name:</strong> Mamta Gupta</p>
+
+        <p>
+          <strong>Address:</strong>
+          D 29/2 Meenakshipuram Meerut 250001
+        </p>
+
+        <p>
+          <strong>Phone:</strong>
+          7017898533
+        </p>
+
+        <p>
+          <strong>Email:</strong>
+          3003mamta@gmail.com
+        </p>
+
+        <!-- REAL MAP -->
+
+        <iframe
+          src="https://maps.google.com/maps?q=Meenakshipuram%20Meerut&t=&z=13&ie=UTF8&iwloc=&output=embed"
+          width="100%"
+          height="250"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
+
+      </div>
+
+      <div class="contact-form">
+
+        <h3>Send Message</h3>
+
+        <form>
+
+          <input type="text" placeholder="Your Name" required>
+
+          <input type="email" placeholder="Your Email" required>
+
+          <input type="text" placeholder="Phone Number" required>
+
+          <textarea placeholder="Write Your Query"></textarea>
+
+          <button class="btn btn-primary">
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="footer">
+
+    <div class="footer-content">
+
+      <div>
+
+        <h3>Astro Solutions By Mamta Gupta</h3>
+
+        <p>
+          Trusted astrology consultation for Horoscope,
+          Vaastu, Match Making, Career and Health Guidance.
+        </p>
+
+      </div>
+
+      <div>
+
+        <h3>Quick Links</h3>
+
+        <p><a href="#">Home</a></p>
+        <p><a href="#services">Services</a></p>
+        <p><a href="#about">About</a></p>
+        <p><a href="#contact">Contact</a></p>
+
+      </div>
+
+      <div>
+
+        <h3>Contact</h3>
+
+        <p>📞 7017898533</p>
+        <p>📧 3003mamta@gmail.com</p>
+        <p>📍 Meerut, Uttar Pradesh</p>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 Astro Solutions By Mamta Gupta | All Rights Reserved
+    </div>
+
+  </footer>
+
+  <!-- ================= FLOATING WHATSAPP ================= -->
+
+  <a href="https://wa.me/917017898533" class="floating-whatsapp">
+    WhatsApp
+  </a>
+
+</body>
+
+</html>
